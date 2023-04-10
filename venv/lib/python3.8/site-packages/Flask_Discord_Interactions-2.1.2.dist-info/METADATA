@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: Flask-Discord-Interactions
+Version: 2.1.2
+Summary: A Flask extension for Discord slash commands.
+Home-page: https://github.com/breqdev/flask-discord-interactions
+Author: Brooke Chalmers
+Author-email: breq@breq.dev
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask
+Requires-Dist: requests
+Requires-Dist: PyNaCl
+Requires-Dist: requests-toolbelt
+Provides-Extra: async
+Requires-Dist: Quart ; extra == 'async'
+Requires-Dist: aiohttp ; extra == 'async'
+
+# Flask-Discord-Interactions
+
+This is a Flask extension that lets you write Discord Application Commands using a decorator syntax similar to Flask's `@app.route()` or Discord.py's `@bot.command()`.
+
+```
+@discord.command()
+def ping(ctx):
+    "Respond with a friendly 'pong'!"
+    return "Pong!"
+```
+
+Full documentation is available on [readthedocs](https://flask-discord-interactions.readthedocs.io/).
